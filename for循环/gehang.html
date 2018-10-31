@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .list{
+        width: 320px;
+        height: 480px;
+        padding: 0;
+        list-style: none;
+        margin: 0 auto;
+        position: relative;
+    }
+    li{
+        position: absolute;
+        width: 32px;
+        height: 48px;
+        text-align: center;
+        background: url("img.jpeg") no-repeat;
+    }
+</style>
+<body>
+<ul class="list"></ul>
+<script>
+    var list = document.querySelector(".list");
+    var nub = "";
+    var h= 48;
+    var w= 32;
+    for (var i= 0;i<10;i++){
+        nub +='<li style="top:'+i*h+' px;left:'+i+' px;"></li>'
+    }
+    list.innerHTML = nub;
+</script>
+</body>
+</html>

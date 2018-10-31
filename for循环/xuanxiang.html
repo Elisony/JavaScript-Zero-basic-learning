@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    span{
+        display: inline-block;
+        width: 100px;
+        height: 30px;
+        border: 1px solid #000;
+        text-align: center;
+    }
+    .center{
+        width: 300px ;
+        height: 100px;
+        border: 1px solid #000;
+    }
+    .itme{
+        font: 50px/100px "宋体";
+        text-align: center;
+        display: none;
+    }
+</style>
+<body>
+<div class="box">
+    <span style="background-color: red">选项一</span>
+    <span>选项二</span>
+    <span>选项三</span>
+</div>
+<div class="center">
+    <div class="itme" style="display: block" >一</div>
+    <div class="itme">二</div>
+    <div class="itme">三</div>
+</div>
+<script>
+    var  box = document.querySelectorAll(".box span");
+    var itme = document.querySelectorAll(".itme");
+    for(var i =0;i<box.length;i++){
+        box[i].id=i;
+        box[i].onclick = function () {
+            for(var i =0;i<box.length;i++){
+                box[i].style.backgroundColor = "";
+                itme[i].style.display = "none";
+            }
+            this.style.backgroundColor = "red";
+            itme[this.id].style.display = "block";
+            console.log(this.id);
+
+        }
+    }
+
+</script>
+</body>
+</html>
