@@ -1,0 +1,588 @@
+body {
+  margin: 0;
+}
+button {
+  padding: 0;
+  border: 0;
+  background: #e5463b;
+}
+a {
+  color: #5a5a5a;
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+  margin: 0;
+}
+.box {
+  background: #f8fafc;
+}
+.title {
+  width: 25rem;
+  height: 5.41666667rem;
+  background: #e5463b;
+}
+.title .top {
+  height: 2.26851852rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+.title .top .left {
+  width: 2.03703704rem;
+  height: 100%;
+}
+.title .top .left:focus .july {
+  left: 0;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.92, 1.4);
+}
+.title .top .left a {
+  display: inline-block;
+  font-size: 0.92592593rem;
+  padding: 1.15740741rem 0 0 0.87962963rem;
+  position: relative;
+  color: #fff;
+}
+.title .top .left a .tow {
+  display: inline-block;
+  width: 1.06481481rem;
+  height: 0.87962963rem;
+  border-radius: 40%;
+  background: #fff;
+  position: absolute;
+  bottom: 0.69444444rem;
+  right: -0.46296296rem;
+  text-align: center;
+  font-size: 0.64814815rem;
+  line-height: 0.87962963rem;
+  color: #d33a31;
+  font-family: "宋体";
+}
+.title .top .middle {
+  width: 7.89351852rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.title .top .middle i {
+  padding-top: 0.83333333rem;
+  font-size: 1.48148148rem;
+  display: inline-block;
+  color: #eb8c86;
+}
+.title .top .middle a {
+  padding-top: 0.83333333rem;
+  font-size: 1.48148148rem;
+  display: inline-block;
+  color: #eb8c86;
+}
+.title .top .middle .icon-music {
+  color: #fff;
+}
+.title .top .right {
+  width: 1.96759259rem;
+  height: 100%;
+}
+.title .top .right i {
+  padding-top: 0.92592593rem;
+  display: inline-block;
+  font-size: 1.43518519rem;
+  color: #fff;
+}
+.july {
+  position: absolute;
+  height: 100%;
+  width: 21.27314815rem;
+  border: 1px solid #000000;
+  z-index: 3;
+  top: 0;
+  left: -100%;
+  text-align: left;
+}
+.july .sign {
+  height: 6.55092593rem;
+  width: 100%;
+  background: url("../images/tt9_03.png") repeat-x;
+  background-size: 100% ;
+  position: relative;
+  padding-top: 2.08333333rem;
+}
+.july .sign .round {
+  width: 3.7962963rem;
+  height: 3.7962963rem;
+  border-radius: 50%;
+  background: #000001 url("../images/QQ4.gif") no-repeat;
+  margin-left: 0.81018519rem;
+  background-size: 100% ;
+}
+.july .sign .qis {
+  height: 2.38425926rem;
+  width: 100%;
+}
+.july .sign .qis .vipp {
+  width: 5.11574074rem;
+  height: 100%;
+  float: left;
+}
+.july .sign .qis .vipp span {
+  font-size: 0.83333333rem;
+  font-weight: bold;
+  font-family: "微软雅黑";
+  line-height: 2.5462963rem;
+  color: #fff;
+  padding-left: 0.625rem;
+}
+.july .sign .qis .vipp img {
+  height: 0.94907407rem;
+  width: 1.68981481rem;
+  padding-left: 0.39351852rem;
+  padding-top: 0.92592593rem;
+  vertical-align: top;
+}
+.july .sign .qis .eight {
+  float: left;
+  width: 1.71296296rem;
+  height: 0.87962963rem;
+  border: 0.0462963rem solid #afb3b5;
+  border-radius: 0.74074074rem;
+  margin-left: 0.32407407rem;
+  margin-top: 0.87962963rem;
+  text-align: center;
+}
+.july .sign .qis .eight i {
+  font-size: 0.69444444rem;
+  color: #fff;
+}
+.july .sign .qis .qiandao {
+  float: right;
+  width: 3.7962963rem;
+  height: 1.31944444rem;
+  border: 0.0462963rem solid #afb3b5;
+  border-radius: 0.74074074rem;
+  margin-right: 0.625rem;
+  margin-top: 0.5787037rem;
+}
+.july .sign .qis .qiandao i {
+  font-size: 0.69444444rem;
+  display: inline-block;
+  width: 1.15740741rem;
+  height: 1.15740741rem;
+  margin-top: 0.27777778rem;
+  text-align: center;
+}
+.july .sign .qis .qiandao span {
+  font-size: 0.69444444rem;
+  color: #fff;
+}
+.july .binding {
+  height: 3.125rem;
+  width: 100%;
+  background: #fffbe5;
+}
+.july .binding .tel {
+  width: 13.86574074rem;
+  height: 100%;
+  margin-left: 0.83333333rem;
+  display: flex;
+  justify-content: center;
+  float: left;
+}
+.july .binding .tel span {
+  padding-top: 0.69444444rem;
+  color: #8b897d;
+  font-size: 0.69444444rem;
+  line-height: 0.99537037rem;
+}
+.july .binding .liji {
+  float: left;
+  margin-top: 0.92592593rem;
+  margin-left: 0.69444444rem;
+  width: 3.7037037rem;
+  height: 1.2037037rem;
+  border: 0.0462963rem solid #d33a31;
+  border-radius: 0.74074074rem;
+  text-align: center;
+}
+.july .binding .liji span {
+  font-size: 0.64814815rem;
+  font-family: "微软雅黑";
+  color: #d43d34;
+  line-height: 1.2037037rem;
+}
+.july .binding .jujue {
+  margin: 1.27314815rem 0 0 0.85648148rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  float: left;
+}
+.july .vip {
+  height: 34.21296296rem;
+  width: 100%;
+}
+.july .vip ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+.july .vip ul li {
+  height: 2.40740741rem;
+  width: 100%;
+  background: #fff;
+  font-size: 0.69444444rem;
+  font-family: "微软雅黑";
+  line-height: 2.26851852rem;
+  font-weight: bold;
+  color: #333333;
+}
+.july .vip ul li i {
+  padding-left: 0.69444444rem;
+  font-size: 1.04166667rem;
+  font-weight: bold;
+  vertical-align: middle;
+  color: #9a9a9a;
+}
+.july .vip ul li span {
+  padding-left: 0.60185185rem;
+}
+.july .vip .message {
+  height: 11.9212963rem;
+  border-top: 0.34722222rem solid #f1f2f3;
+}
+.july .vip .message i {
+  display: inline-block;
+  height: 100%;
+  color: #9a9a9a;
+}
+.july .vip .message em {
+  display: inline-block;
+  height: 1.48148148rem;
+  width: 2.33796296rem;
+  margin-left: 13.05555556rem;
+}
+.july .vip .message em img {
+  vertical-align: middle;
+  height: 1.48148148rem;
+  width: 2.33796296rem;
+}
+.july .vip .message .lanya {
+  color: #808080;
+  padding-left: 8.42592593rem;
+}
+.july .vip .message .lanya .yangqi {
+  width: 1.57407407rem;
+  height: 1.57407407rem;
+  vertical-align: middle;
+}
+.july .vip .message .kaixue {
+  color: #808080;
+  padding-left: 5.37037037rem;
+}
+.july .vip .message .kaixue .yangqi {
+  width: 1.57407407rem;
+  height: 1.57407407rem;
+  vertical-align: middle;
+}
+.july .vip .my {
+  border-top: 0.34722222rem solid #f1f2f3;
+  height: 4.60648148rem;
+}
+.july .vip .my li {
+  height: 2.31481481rem;
+  width: 100%;
+  background: #fff;
+  font-size: 0.69444444rem;
+  font-family: "微软雅黑";
+  line-height: 2.26851852rem;
+  font-weight: bold;
+}
+.july .vip .my li i {
+  vertical-align: top;
+  width: 0.87962963rem;
+  color: #9a9a9a;
+}
+.july .vip .my li .wy {
+  color: #808080;
+  padding-left: 5.90277778rem;
+}
+.july .vip .my li img {
+  vertical-align: middle;
+  height: 0.53240741rem;
+  width: 0.55555556rem;
+}
+.july .vip .clothes {
+  border-top: 0.34722222rem solid #f1f2f3;
+  height: 16.55092593rem;
+}
+.july .vip .clothes li {
+  height: 2.36111111rem;
+  width: 100%;
+  background: #fff;
+}
+.july .vip .clothes li .guangfang {
+  padding-left: 13.42592593rem;
+  color: #808080;
+}
+.july .vip .clothes li .guangfang i {
+  color: #9a9a9a;
+}
+.july .vip .clothes li .one {
+  padding-left: 10.48611111rem;
+}
+.july .vip .night {
+  border-top: 1px solid #f1f2f3;
+  height: 2.63888889rem;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+.july .vip .night li {
+  width: 6.34259259rem;
+  float: left;
+  height: 100%;
+}
+.heijiao {
+  height: 3.93518519rem;
+  width: 24.30555556rem;
+  border-radius: 5%;
+  background: #babbbc;
+  position: absolute;
+  top: 3.33333333rem;
+  left: 0.34722222rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0.11574074rem 0 0.11574074rem #eaebec;
+}
+.heijiao .touxiang {
+  width: 2.5462963rem;
+  height: 2.5462963rem;
+  border-radius: 50%;
+  background: #1b0b26 url("../images/QQ4.gif") no-repeat;
+  background-size: 100% ;
+  margin-left: 0.81018519rem;
+}
+.heijiao .qiyue {
+  width: 11.57407407rem;
+}
+.heijiao .qiyue span {
+  padding-left: 0.69444444rem;
+  font-size: 0.83333333rem;
+}
+.heijiao .qiyue img {
+  width: 2.84722222rem;
+  height: 0.87962963rem;
+  padding-left: 0.46296296rem;
+  vertical-align: middle;
+}
+.heijiao .vip {
+  height: 1.2962963rem;
+  width: 3.84259259rem;
+  border-radius: 0.74074074rem;
+  border: 0.0462963rem solid #d33a31;
+  margin-left: 4.62962963rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heijiao .vip span {
+  font-size: 0.69444444rem;
+  line-height: 1.2962963rem;
+  font-family: "微软雅黑";
+  color: #d33a31;
+}
+.bendi {
+  height: 14.44444444rem;
+  width: 100%;
+  margin-top: 2.5462963rem;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+.bendi li {
+  height: 2.87037037rem;
+}
+.bendi li .div {
+  width: 2.91666667rem;
+  height: 2.80092593rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+.bendi li i {
+  display: inline-block;
+  width: 1.2037037rem;
+  height: 1.2037037rem;
+  font-size: 1.2037037rem;
+  color: #dd6a64;
+}
+.bendi li .music {
+  width: 22.08333333rem;
+  height: 100%;
+  float: left;
+  border-bottom: 1px solid #e2e3e4;
+}
+.bendi li .music span {
+  font-size: 0.87962963rem;
+  line-height: 2.87037037rem;
+}
+.bendi li .music span .shizi {
+  color: #bcbdbe;
+}
+.create {
+  height: 1.73611111rem;
+  width: 100%;
+  background: #eff0f1;
+}
+.create .five {
+  width: 7.40740741rem;
+  float: left;
+  height: 100%;
+}
+.create .five span {
+  font-size: 0.87962963rem;
+  line-height: 1.73611111rem;
+  padding-left: 0.6712963rem;
+}
+.create .set {
+  width: 2.80092593rem;
+  height: 100%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.create .set i {
+  font-size: 0.99537037rem;
+  font-weight: bold;
+}
+.mymusic {
+  height: 17.36111111rem;
+  width: 100%;
+}
+.mymusic li {
+  height: 3.47222222rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.mymusic li .musicleft {
+  width: 4.00462963rem;
+  height: 3.47222222rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mymusic li .musicleft img {
+  display: inline-block;
+  width: 3.10185185rem;
+  height: 3.10185185rem;
+}
+.mymusic li .musicright {
+  width: 20.92592593rem;
+  height: 3.44907407rem;
+  border-bottom: 1px solid #eff0f1;
+  display: flex;
+  justify-content: space-between;
+}
+.mymusic li .musicright .myy {
+  width: 11.57407407rem;
+  height: 100%;
+}
+.mymusic li .musicright .one {
+  padding-top: 0.50925926rem;
+  font-size: 0.83333333rem;
+  line-height: 0.92592593rem;
+  font-weight: bold;
+  font-family: "微软雅黑";
+}
+.mymusic li .musicright i {
+  font-size: 1.08796296rem;
+  width: 1.08796296rem;
+  height: 1.08796296rem;
+  display: inline-block;
+  color: #5ab5e7;
+  vertical-align: middle;
+}
+.mymusic li .musicright span {
+  font-size: 0.64814815rem;
+  line-height: 1.08796296rem;
+  font-family: "微软雅黑";
+  color: #9d9e9f;
+}
+.mymusic li .musicright .shengnuehao {
+  width: 2.80092593rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mymusic li .musicright .shengnuehao i {
+  width: 1.04166667rem;
+  height: 0.92592593rem;
+  color: #d33a31;
+}
+.bottom {
+  height: 2.80092593rem;
+  width: 100%;
+  border-top: 1px solid #e6e6e6;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  background: #fdfcfa;
+}
+.bottom .maliang {
+  margin: 0 auto;
+  width: 23.88888889rem;
+  height: 100%;
+}
+.bottom .maliang .left {
+  float: left;
+  padding-top: 0.30092593rem;
+  width: 2.17592593rem;
+  height: 2.17592593rem;
+}
+.bottom .maliang .left img {
+  width: 2.17592593rem;
+  height: 2.17592593rem;
+}
+.bottom .maliang .middle {
+  padding: 0.23148148rem 0 0 0.34722222rem;
+  float: left;
+  width: 7.17592593rem;
+  height: 100%;
+}
+.bottom .maliang .middle p {
+  margin: 0;
+  font-size: 0.74074074rem;
+  line-height: 1.15740741rem;
+  font-family: "微软雅黑";
+  font-weight: 500;
+  color: #333333;
+}
+.bottom .maliang .middle .switch {
+  margin: 0;
+  font-size: 0.60185185rem;
+  line-height: 1.15740741rem;
+  font-family: "微软雅黑";
+  color: #808080;
+}
+.bottom .maliang .right {
+  width: 3.93518519rem;
+  height: 100%;
+  float: right;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom .maliang .right i {
+  padding-top: 0.69444444rem;
+  font-size: 1.48148148rem;
+  color: #4d4d4d;
+}

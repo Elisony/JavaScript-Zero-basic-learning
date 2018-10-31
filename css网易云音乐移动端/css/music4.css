@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+}
+button {
+  padding: 0;
+  border: 0;
+  background: #251a11;
+  outline: none;
+}
+a {
+  color: #5a5a5a;
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+  margin: 0;
+}
+.title {
+  height: 16.31944444rem;
+  width: 100%;
+  background: #251a11;
+}
+.title .palylist {
+  height: 2.77777778rem;
+  display: flex;
+  justify-content: space-between;
+}
+.title .palylist .left {
+  width: 6.25rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.title .palylist .left a {
+  font-size: 1.2962963rem;
+  color: #fff;
+}
+.title .palylist .left span {
+  font-size: 1.04166667rem;
+  font-family: "微软雅黑";
+  color: #fff;
+}
+.title .palylist .right {
+  width: 6.06481481rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.title .palylist .right i {
+  font-size: 1.2962963rem;
+  color: #fff;
+}
+.title .palylist .right em {
+  font-size: 1.2962963rem;
+  color: #fff;
+}
+.title .like {
+  height: 7.29166667rem;
+  margin-top: 1.38888889rem;
+  display: flex;
+  justify-content: space-between;
+}
+.title .like .left {
+  width: 8.47222222rem;
+  height: 100%;
+}
+.title .like .left img {
+  width: 7.29166667rem;
+  height: 7.29166667rem;
+  float: right;
+}
+.title .like .right {
+  width: 16.52777778rem;
+  height: 100%;
+  background: #ffcc01;
+}
+.title .like .right .top {
+  height: 2.31481481rem;
+}
+.title .like .right .top span {
+  font-size: 1.04166667rem;
+  line-height: 2.31481481rem;
+  font-weight: bold;
+  color: #fff;
+}

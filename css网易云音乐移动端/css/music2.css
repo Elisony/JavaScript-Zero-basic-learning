@@ -1,0 +1,236 @@
+body {
+  margin: 0;
+}
+a {
+  color: #5a5a5a;
+  text-decoration: none;
+}
+.box {
+  width: 25rem;
+}
+.title {
+  height: 3.00925926rem;
+  width: 100%;
+  background: #dc4036;
+}
+.title .left {
+  width: 3.24074074rem;
+  height: 100%;
+  text-align: center;
+  float: left;
+}
+.title .left i {
+  display: inline-block;
+  margin-top: 0.92592593rem;
+  width: 1.2037037rem;
+  height: 1.06481481rem;
+  font-size: 1.2037037rem;
+  color: #fff;
+}
+.title .txt {
+  width: 4.16666667rem;
+  height: 100%;
+  float: left;
+}
+.title .txt span {
+  font-size: 0.99537037rem;
+  line-height: 3.00925926rem;
+  font-weight: bold;
+  font-family: "微软雅黑";
+  color: #fff;
+}
+.title .right {
+  width: 1.15740741rem;
+  height: 1.15740741rem;
+  border: 0.09259259rem solid #ffffff;
+  border-radius: 50%;
+  float: right;
+  margin-top: 0.92592593rem;
+  margin-right: 0.81018519rem;
+  text-align: center;
+  vertical-align: top;
+}
+.title .right span {
+  margin-bottom: -0.46296296rem;
+  color: #fff;
+}
+.picture {
+  width: 100%;
+  height: 10.64814815rem;
+  background: url("../images/dongxi_02-(1)_02.png") no-repeat;
+  background-size: 100% ;
+}
+.picture i {
+  display: inline-block;
+  padding-top: 4.12037037rem;
+  font-size: 3.7037037rem;
+  color: #fff;
+  margin-left: 0.92592593rem;
+}
+.bofang {
+  height: 2.80092593rem;
+  width: 100%;
+  border-radius: 10% 10%  0 0 ;
+  background: #fff;
+  margin-top: -0.23148148rem;
+  border: 1px solid #eff0f1;
+}
+.bofang .all {
+  width: 5.78703704rem;
+  margin-left: 0.81018519rem;
+  float: left;
+}
+.bofang .all span {
+  font-size: 0.92592593rem;
+  line-height: 2.80092593rem;
+  font-family: "微软雅黑";
+  vertical-align: middle;
+}
+.bofang .all i {
+  display: inline-block;
+  font-size: 1.2962963rem;
+  height: 1.22685185rem;
+  width: 1.22685185rem;
+  vertical-align: middle;
+}
+.bofang .more {
+  width: 3.125rem;
+  float: right;
+  margin-right: 0.50925926rem;
+}
+.bofang .more span {
+  font-size: 0.92592593rem;
+  line-height: 2.80092593rem;
+  font-family: "微软雅黑";
+}
+.bofang .more i {
+  display: inline-block;
+  font-size: 0.78703704rem;
+  height: 0.81018519rem;
+  width: 0.81018519rem;
+}
+.song {
+  height: 28.77314815rem;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.song li {
+  height: 3.19444444rem;
+  width: 100%;
+}
+.song li .left {
+  height: 3.19444444rem;
+  width: 2.87037037rem;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.song li .left img {
+  vertical-align: middle;
+  height: 2.08333333rem;
+  width: 2.06018519rem;
+}
+.song li .right {
+  margin-top: 0.41666667rem;
+  width: 22.12962963rem;
+  height: 3.14814815rem;
+  border-bottom: 0.0462963rem solid #000000;
+  float: left;
+}
+.song li .right .zuobian {
+  width: 18.10185185rem;
+  height: 100%;
+  float: left;
+}
+.song li .right .zuobian h5 {
+  margin: 0;
+  line-height: 1.38888889rem;
+}
+.song li .right .zuobian .name {
+  width: 100%;
+}
+.song li .right .zuobian .name img {
+  width: 0.83333333rem;
+  height: 0.53240741rem;
+  vertical-align: middle;
+}
+.song li .right .zuobian .name span {
+  font-size: 0.64814815rem;
+  line-height: 1.06481481rem;
+  font-family: "微软雅黑";
+}
+.song li .right .youbian {
+  width: 3.98148148rem;
+  height: 100%;
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.song li .right .youbian i {
+  text-align: left;
+  width: 1.48148148rem;
+  height: 1.08796296rem;
+  font-size: 1.31944444rem;
+  color: #101214;
+}
+.bottom {
+  height: 2.80092593rem;
+  width: 100%;
+  border-top: 1px solid #e6e6e6;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  background: #fdfcfa;
+}
+.bottom .maliang {
+  margin: 0 auto;
+  width: 23.88888889rem;
+  height: 100%;
+}
+.bottom .maliang .left {
+  float: left;
+  padding-top: 0.30092593rem;
+  width: 2.17592593rem;
+  height: 2.17592593rem;
+}
+.bottom .maliang .left img {
+  width: 2.17592593rem;
+  height: 2.17592593rem;
+}
+.bottom .maliang .middle {
+  padding: 0.23148148rem 0 0 0.34722222rem;
+  float: left;
+  width: 7.17592593rem;
+  height: 100%;
+}
+.bottom .maliang .middle p {
+  margin: 0;
+  font-size: 0.74074074rem;
+  line-height: 1.15740741rem;
+  font-family: "微软雅黑";
+  font-weight: 500;
+  color: #333333;
+}
+.bottom .maliang .middle .switch {
+  margin: 0;
+  font-size: 0.60185185rem;
+  line-height: 1.15740741rem;
+  font-family: "微软雅黑";
+  color: #808080;
+}
+.bottom .maliang .right {
+  width: 3.93518519rem;
+  height: 100%;
+  float: right;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom .maliang .right i {
+  padding-top: 0.69444444rem;
+  font-size: 1.48148148rem;
+  color: #4d4d4d;
+}
