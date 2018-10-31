@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    h2 {
+        margin: 0;
+    }
+    .box {
+        width: 120px;
+        border: 1px solid #000;
+        cursor: pointer;
+    }
+    .box h2 {
+        font: 14px/36px "宋体";
+        text-align: center;
+        background: #ddd;
+    }
+    .box ul {
+        font: 12px/30px "宋体";
+        text-indent: 10px;
+        display: none;
+    }
+    .box .show {
+        display: block;
+    }
+    .box li {
+        border-top: 1px solid #000;
+    }
+    .box .color{
+        background-color: red;
+    }
+</style>
+<body>
+    <div class="box">
+            <h2>我的好友</h2>
+            <ul>
+                <li>一</li>
+                <li>二</li>
+                <li>三</li>
+            </ul>
+            <h2>企业好友</h2>
+            <ul>
+                <li>一</li>
+                <li>二</li>
+                <li>三</li>
+            </ul>
+            <h2>黑名单</h2>
+            <ul>
+                <li>一</li>
+                <li>二</li>
+                <li>三</li>
+            </ul>
+    </div>
+<script>
+    var h2 = document.querySelectorAll(".box h2");
+    var qwe = document.querySelectorAll(".box ul");
+    var lis = document.querySelectorAll("ul li");
+    for(var i = 0; i < h2.length; i++) {
+        h2[i].index = i;
+        h2[i].isHide = true;
+        h2[i].onclick = function () {
+            if (h2[this.index].isHide) {
+                for (var i = 0; i < h2.length; i++) {
+                    qwe[i].className = "";
+                    h2[i].isHide = true;
+                }
+                qwe[this.index].className = "show";
+                h2[this.index].isHide = false;
+            } else {
+                qwe[this.index].className = "";
+                h2[this.index].isHide = true;
+            }
+        }
+    }
+        for (var a =0;a<lis.length;a++){
+            lis[a].index = a;
+            lis[a].onclick = function () {
+                console.log(lis[a]);
+            if(lis[this.index].className == ""){
+                for (var a =0;a<lis.length;a++){
+                    lis[a].className = "";
+                }
+                lis[this.index].className = "color";
+            }else {
+                lis[this.index].className = "";
+            }
+
+        }
+        }
+
+</script>
+</body>
+</html>
