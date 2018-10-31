@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+#box{
+    border: 1px solid #000;
+    width: 150px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+h2{ 
+    text-align: center;
+    margin: 0;
+}
+#muse{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+li{
+    text-align: center;
+    border-top: 1px solid #000;
+}
+</style>
+<body>
+    <div id="box">
+        <h2>新闻网站</h2>
+        <ul id="muse">
+            <li>人民网</li>
+            <li>新闻网</li>
+            <li>央视网</li>
+        </ul>
+    </div>
+    <script>
+    var bix = document.getElementById("box");
+    var mue = document.getElementById("muse");
+    bix.onmouseover = function (){
+       mue.style.height = "66px";
+   };
+    bix.onmouseout = function (){
+        mue.style.height = "0";
+    };
+    </script>
+</body>
+</html>

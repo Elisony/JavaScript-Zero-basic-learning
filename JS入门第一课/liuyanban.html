@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+p{
+    margin: 0;
+    text-indent: 2em;
+}
+span{
+    font-weight: bold;
+}
+.box{
+    width: 400px;
+    margin: 50px auto;
+}
+#text{
+    width: 100%;
+    height: 200px;
+    border: 1px solid #000;
+}
+#txt{
+    margin-left: 100px;
+}
+#list{
+    padding: 0;
+    margin: 0;
+    height: 200px;
+    list-style: none;
+    border-top:1px solid #000; 
+    margin-top: 5px;
+}
+
+</style>
+<body>
+    <div class="box">
+        <textarea id="text"></textarea>
+        <button id="txt">提交留言</button>
+        <select id="bot">
+            <option>小李</option>
+            <option>小向</option>
+            <option>小张</option>
+            <option>小王</option>
+        </select>
+        <input type="color" id="col">
+        <ul id="list"></ul>
+    </div>
+    <script>
+    var text = document.getElementById("text");
+    var txt = document.getElementById("txt");
+    var col = document.getElementById("col");
+    var list = document.getElementById("list");
+    var bot = document.getElementById("bot");
+    txt.onclick = function(){
+        list.innerHTML += '<li style = "background-color: '+ col.value +'"><div><span>' + bot.value+ '</span>说:</div><p>'+text.value+'</p></li>'
+        col.value = "";
+        text.value = "";
+    };
+    </script>
+</body>
+</html>
