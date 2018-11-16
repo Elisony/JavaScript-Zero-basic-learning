@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 200px;
+            border: 1px solid #000000;
+            margin: 0 auto;
+        }
+        .top{
+            width: 100%;
+            height: 40px;
+            border-bottom: 1px solid #000;
+            display: flex;
+            justify-content:space-around;
+        }
+       .top div{
+           font: 20px/40px "微软雅黑";
+           width: 100px;
+           text-align: center;
+           background: #ccc;
+       }
+       .bottom{
+           margin: 0;
+           padding: 0;
+           list-style: none;
+           width: 100%;
+           height: 158px;
+           position: relative;
+       }
+        .bottom li {
+            display: flex;
+            width: 100%;
+            height: 158px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .tupian{
+            width: 200px;
+            height: 158px;
+            position: relative;
+        }
+        p{
+            margin:10px 0;
+            width: 200px;
+            height:40px ;
+            background: #999999;
+
+        }
+        .tet{
+            text-align: center;
+        }
+        .tupian img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 158px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="top">
+        <div class="one" style="background: red">
+            <span>新闻</span>
+        </div>
+        <div class="one">
+            <span>娱乐</span>
+        </div>
+        <div class="one">
+            <span>电视</span>
+        </div>
+    </div>
+    <ul class="bottom">
+        <li style="z-index: 1">
+            <div class="tupian">
+                <img src="img2/0.jpg" style="z-index: 1">
+                <img src="img2/1.jpg">
+                <img src="img2/2.jpg">
+            </div>
+            <div class="tet">
+                <p style="background: red">这是第一张图片</p>
+                <p>这是第二张图片</p>
+                <p>这是第三张图片</p>
+            </div>
+        </li>
+        <li>
+            <div class="tupian">
+                <img src="img2/3.jpg">
+                <img src="img2/4.jpg">
+                <img src="img2/5.jpg">
+            </div>
+            <div class="tet">
+                <p>定时器setInterval</p>
+                <p>清除定时器clearInterval</p>
+                <p style="background: red">定时器setInterval和清除定时器</p>
+            </div>
+        </li>
+        <li>
+            <div class="tupian">
+                <img src="img2/6.jpg">
+                <img src="img2/7.jpg">
+                <img src="img2/8.jpg">
+            </div>
+            <div class="tet">
+                <p>这是妙味课堂</p>
+                <p>这是妙味食堂</p>
+                <p style="background: red">这是妙味茶馆</p>
+            </div>
+        </li>
+    </ul>
+    </div>
+<script src="miaov.js"></script>
+<script>
+    {
+        let one = document.querySelectorAll(".one");
+        let lis = document.querySelectorAll(".bottom li");
+        let now =0;
+        let img = document.querySelectorAll("img");
+        let txt= document.querySelectorAll(".tet p");
+        for (let i =0;i<one.length;i++){
+            one[i].index = i;
+            //点击one显示li
+            one[i].onmousemove = function () {
+                for (let i =0;i<one.length;i++){
+                    one[i].style.backgroundColor ="";
+                }
+                one[this.index].style.backgroundColor ="red";
+                now++;
+                lis[this.index].style.zIndex = now;
+            };
+        }
+        for(a=0;a<txt.length;a++){
+            //点击文字改变图片
+            txt[a].index =a;
+            txt[a].onmousemove =function () {
+                now++;
+                img[this.index].style.zIndex =now;
+                for (let a =0;a<txt.length;a++){
+                    txt[a].style.backgroundColor ="";
+                }
+                txt[this.index].style.backgroundColor ="red";
+            }
+        }
+    }
+</script>
+</body>
+</html>

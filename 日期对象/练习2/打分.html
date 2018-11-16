@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+     .box{
+         width: 500px;
+         height: 30px;
+         display: flex;
+         justify-content: space-around;
+         margin: 150px auto;
+         padding: 0;
+         list-style: none;
+     }
+        li{
+            width: 30px;
+            height: 30px;
+            border: 1px solid #000000;
+            text-align: center;
+        }
+       .box .cloo{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<ul class="box">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+    {
+        let lis = document.querySelectorAll(".box li");
+        lis.forEach((li,index) => {
+           let now = index-4;
+           li.innerHTML = now;
+           li.onmousemove = function () {
+               let star = 0;
+               let end = 0;
+               if (now > 0) {//说明在右侧
+                   star = 4;
+                   end = now + 4;
+               } else {
+                   star = now + 4;
+                   end = 4;
+               }
+               lis.forEach((item, index) => {
+                   if (index >= star && index <= end) {
+                       item.className = "cloo";
+                   } else {
+                       item.className = "";
+                   }
+               })
+           };
+           li.onclick =function () {
+               lis.forEach((li)=>{
+                    li.onclick=li.onmousemove = li.onmouseout =null;
+               })
+           };
+           li.onmouseout =function () {
+               lis.forEach((item)=>{
+                   item.className = "";
+               })
+           }
+        })
+    }
+</script>
+</body>
+</html>

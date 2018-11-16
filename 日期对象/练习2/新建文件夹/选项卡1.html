@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 250px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            background: #999999;
+        }
+        .box .top{
+            width: 100%;
+            height:50px;
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+        }
+        .top span{
+            width: 120px;
+            background: #fff;
+            display: block;
+            font: 25px/50px "微软雅黑";
+            text-align: center;
+        }
+        .top .colo{
+            background: red;
+        }
+        .left{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            float: left;
+
+        }
+        .left img{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .left img:nth-child(1){
+            z-index: 1;
+        }
+        .right{
+            width:200px;
+            height: 200px;
+            float: left;
+        }
+        p{
+            margin:15px 0;
+            height: 50px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            background: #fff;
+        }
+        .box2{
+            width: 400px;
+            height: 200px;
+            position: relative;
+        }
+        .bottom{
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .coo{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="top">
+        <span class="colo">新闻</span>
+        <span>娱乐</span>
+        <span>茶馆</span>
+    </div>
+    <div class="box2">
+        <div class="bottom" style="display: block">
+            <div class="left">
+                <img src="img2/1.jpg">
+                <img src="img2/2.jpg">
+                <img src="img2/0.jpg">
+            </div>
+            <div class="right">
+                <p class="coo">土耳其12日跟团游国庆预售</p>
+                <p>带她去浪漫的土耳其</p>
+                <p>WOW！海外精选酒店推荐</p>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="left">
+                <img src="img2/3.jpg">
+                <img src="img2/4.jpg">
+                <img src="img2/5.jpg">
+            </div>
+            <div class="right">
+                <p class="coo">土耳其军进入叙利亚阿夫林区</p>
+                <p>土耳其宣称攻占阿夫林</p>
+                <p>土耳其完全控制阿夫林</p>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="left">
+                <img src="img2/6.jpg">
+                <img src="img2/7.jpg">
+                <img src="img2/8.jpg" >
+            </div>
+            <div class="right">
+                <p class="coo">为何有这么多中国人讨厌土耳其?</p>
+                <p>	土耳其地图世界地图</p>
+                <p>土耳其和中国的关系</p>
+            </div>
+        </div>
+    </div>
+</div>
+<button>下一张</button>
+<script>
+    {
+        let span = document.querySelectorAll(".top span");
+        let bot = document.querySelectorAll(".bottom");
+        //需求：1.鼠标点击span，让bottom显示
+        for (let i = 0; i < span.length; i++) {
+            span[i].index = i;
+            span[i].onclick = function () {
+                for (let i = 0; i < span.length; i++) {
+                    bot[i].style.display = "none";
+                }
+                bot[subnow].style.display = "block";
+                for (let i = 0; i < span.length; i++) {
+                    span[i].style.backgroundColor = "#fff";
+                }
+                span[subnow].style.backgroundColor = "red";
+            }
+        }
+        //点击P的时候改变图片
+        fn(bot[0]);//第一组
+        fn(bot[1]);//第二组
+        fn(bot[2]);//第三组
+        function fn(item) {
+            let p = item.querySelectorAll("p");
+            let img = item.querySelectorAll("img");
+            for (let a = 0; a < p.length; a++) {
+                p[a].index = a;
+                p[a].onclick = function () {
+                    for (let a = 0; a < p.length; a++) {
+                        img[a].style.display = "none";
+                    }
+                    img[now].style.display = "block";
+                    for (let a = 0; a < p.length; a++) {
+                        p[a].className = "";
+                    }
+                    p[now].className = "coo";
+                }
+            }
+        }
+        //自动轮播
+            let bth = 0;
+            let box = document.querySelector(".box");
+            let now = 0;//记录当前点击的是第几张
+            let subnow = 0;//记录当前点击的是第几组
+       bth =  setInterval(xun,1000);
+       box.onmousemove = function () {
+           clearInterval(bth);
+       };
+       box.onmouseout =function () {
+           bth =  setInterval(xun,1000);
+       };
+        function xun() {
+            now++;
+            let p = bot[subnow].querySelectorAll("p");
+            let img = bot[subnow].querySelectorAll("img");
+            if (now > p.length-1) {
+                subnow++;
+                now = 0;
+            }
+            for (let a = 0; a < p.length; a++) {
+                img[a].style.display = "none";
+            }
+            img[now].style.display = "block";
+            for (let a = 0; a < p.length; a++) {
+                p[a].className = "";
+            }
+            p[now].className = "coo";
+            if (subnow > p.length - 1) {
+                subnow = 0;
+            }
+            for (let i = 0; i < span.length; i++) {
+                bot[i].style.display = "none";
+            }
+            bot[subnow].style.display = "block";
+            for (let i = 0; i < span.length; i++) {
+                span[i].style.backgroundColor = "#fff";
+            }
+            span[subnow].style.backgroundColor = "red";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .clock{
+        width: 600px;
+        height: 600px;
+        background:url(img/1.jpg) no-repeat;
+        margin: 0px auto;
+        position: relative;
+    }
+    .clock div{
+        width: 600px;
+        height: 600px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    #hour{
+        background: url(img/4.png) no-repeat center center;
+    }
+    #minute{
+        background: url(img/2png.png) no-repeat center center;
+    }
+    #second{
+        background: url(img/3.png) no-repeat center center;
+    }
+</style>
+<body>
+<div class="clock">
+    <div id="hour"></div>
+    <div id="minute"></div>
+    <div id="second"></div>
+</div>
+<script>
+    let hour = document.getElementById("hour");
+    let minute = document.getElementById("minute");
+    let second =document.getElementById("second");
+//    let m =0,h=0,s=0,ms=0;
+    setInterval(function(){
+        let data = new Date();
+        let ms = data.getMilliseconds();
+        let s = data.getSeconds();
+        let m = data.getMinutes() + s /60;
+        let h = data.getHours() + m/60;
+        second.style.transform = "rotate("+6*s+"deg)";
+        hour.style.transform = "rotate("+30*h+"deg)";
+        minute.style.transform = "rotate("+6*m+"deg)";
+    },1000);
+</script>
+</body>
+</html>
