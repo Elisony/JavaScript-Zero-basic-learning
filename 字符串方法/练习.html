@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .big{
+            display: flex;
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box{
+            width: 198px;
+            height: 399px;
+            border: 1px solid #000000 ;
+        }
+        button{
+            width: 100px;
+            height: 20px;
+            background: #999999;
+        }
+    </style>
+</head>
+<body>
+<div class="big">
+    <div class="box one">毛泽东在1955年发出号召，中国不但要有更多的飞机和大炮，而且还要有原子弹。在今天世界上，我们要不受人欺负，就不能没有这个东西。中央指定陈云、聂荣臻、薄一波等负责筹建核工业.1959年苏联撤走专家后,中国决心完全依靠自己的力量完成这艰巨任务。</div>
+    <button>把文字左移</button>
+    <button>把文字右移</button>
+    <div class="box tow"></div>
+</div>
+<script>
+    {
+        let one = document.querySelector(".one");
+        let tow = document.querySelector(".tow");
+        let but = document.querySelectorAll("button");
+        let time = 0;
+        let index =0;
+        but[1].onclick = function () {
+            let now = one.innerHTML;
+            time = setInterval(function () {
+                index++;
+                if(index <= now.length) {
+                    let left = now.substr(0, index);
+                    let le = now.substr(index);
+                    tow.innerHTML = left;
+                    one.innerHTML = le;
+                }else {
+                    clearInterval(time);
+                }
+            },100);
+        };
+        but[0].onclick = function () {
+            let now = tow.innerHTML;
+            time = setInterval(function () {
+                index--;
+                if(index < 0  ) {
+                   clearInterval(time)
+                }else {
+                    let left = now.substr(0, index);
+                    let le = now.substr(index);
+                    tow.innerHTML = left;
+                    one.innerHTML = le;
+                }
+            },100);
+        }
+
+    }
+</script>
+</body>
+</html>
