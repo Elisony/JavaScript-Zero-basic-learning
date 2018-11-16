@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 650px;
+            height: 300px;
+            border: 1px solid #000000;
+            margin: 0 auto;
+        }
+        .pic{
+            width: 100%;
+            height: 250px;
+            margin: 0;
+            list-style: none;
+            padding: 0;
+            display: flex;
+            position: relative;
+        }
+        .pic li{
+            width: 130px;
+            height: 250px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        li img{
+            width: 130px;
+            height: 250px;
+        }
+        .bottom{
+            width: 100%;
+            height:50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul class="pic">
+        <li >
+            <img src="img/1.jpg">
+        </li>
+        <li>
+            <img src="img/2.jpg">
+        </li>
+        <li>
+            <img src="img/3.jpg">
+        </li>
+        <li>
+            <img src="img/4.jpg">
+        </li>
+        <li>
+            <img src="img/5.jpg">
+        </li>
+    </ul>
+    <div class="bottom">
+        <button><<</button>
+        <button>>></button>
+    </div>
+</div>
+<script src="miaov.js"></script>
+<script>
+    {
+        let lis = document.querySelectorAll(".pic li");
+        let bth = document.querySelectorAll("button");
+        let img = document.querySelectorAll("img");
+        let one = Array.from(lis);
+        let arr = [
+            'img/1.jpg',
+            'img/2.jpg',
+            'img/3.jpg',
+            'img/4.jpg',
+            'img/5.jpg'];
+        lis.forEach((item, i) => {
+            item.style.left = i * 130 + "px";
+        });
+            bth[1].onclick = function () {
+                let s = arr.shift();//删除数组首位图片
+                arr.push(s);//再把删除首位的图片添加到末尾
+                for (let i = 0; i < img.length; i++) {
+                    //循环img。让img的src等于对于的数组
+                    img[i].src = arr[i];
+                }
+            };
+
+            bth[0].onclick = function () {
+                let a = arr.pop();//从数组末尾删除一位
+                arr.unshift(a);//从数组头部添加末尾删除的那一张图片
+                for (let i = 0; i < img.length; i++) {
+                    img[i].src = arr[i];
+                }
+            };
+    }
+</script>
+</body>
+</html>

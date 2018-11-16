@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+            background-color: #ccc;
+        }
+        li{
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 25px 12px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<ul class="box">
+    <li>
+        <img src="img/00.jpg">
+    </li>
+    <li>
+        <img src="img/11.jpg">
+    </li>
+    <li>
+        <img src="img/22.jpg">
+    </li>
+    <li>
+        <img src="img/33.jpg">
+    </li>
+    <li>
+        <img src="img/44.jpg">
+    </li>
+    <li>
+        <img src="img/55.jpg">
+    </li>
+    <li>
+        <img src="img/66.jpg">
+    </li>
+    <li>
+        <img src="img/77.jpg">
+    </li>
+</ul>
+<button>从小到大</button><button>打乱顺序</button>
+<script>
+    {
+        let arr=[
+            'img/00.jpg',
+            'img/11.jpg',
+            'img/22.jpg',
+            'img/33.jpg',
+            'img/44.jpg',
+            'img/55.jpg',
+            'img/66.jpg',
+            'img/77.jpg'
+        ];
+        let lis =document.querySelectorAll("li");
+        let bth = document.querySelectorAll("button");
+        let img = document.querySelectorAll("img");
+        bth[1].onclick =function () {
+            let ary =arr.sort(function(){
+                return  Math.random()-0.5 }
+                );
+            for (let i =0;i<img.length;i++){
+                 img[i].src = ary[i];
+             }
+        };
+        bth[0].onclick =function(){
+             let arr2 = arr.sort();
+            for (let i =0;i<img.length;i++){
+                img[i].src = arr2[i];
+            }
+        };
+    }
+</script>
+</body>
+</html>

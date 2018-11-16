@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box{
+            margin: 50px auto;
+            width: 800px;
+        }
+        .box ul {
+            position: relative;
+        }
+        .box li {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+        img {
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div>
+        <button>从小到大</button>
+        <button>随机排序</button>
+    </div>
+    <ul class="list"></ul>
+</div>
+<script src="miaov.js"></script>
+<script>
+    {  //首先想到要改变什么内容，再把要改变的内容放在一个数组里面来操作
+        //arr是需要改变的内容，需要改变它的left和top值
+        let arr = [
+            {
+                img: "img/1.jpg",
+                txt: "1-马天宇"
+            }, {
+                img: "img/2.jpg",
+                txt: "2-马天宇"
+            }, {
+                img: "img/3.jpg",
+                txt: "3-马天宇"
+            }, {
+                img: "img/4.jpg",
+                txt: "4-马天宇"
+            }, {
+                img: "img/5.jpg",
+                txt: "5-马天宇"
+            }, {
+                img: "img/6.jpg",
+                txt: "6-马天宇"
+            }, {
+                img: "img/7.jpg",
+                txt: "7-马天宇"
+            }, {
+                img: "img/8.jpg",
+                txt: "8-马天宇"
+            }
+        ];
+        //获取到ul
+        let list = document.querySelector(".list");
+        //获取到按钮
+        let btns = document.querySelectorAll("button");
+        let inner = "";//定义li标签
+        let rows = 4;//定义一行有4个
+        let w = 200;//定义要移动的宽度
+        let h =200;//定义要移动的高度
+        let position = [];//定义一个数组给每个要移动的数据
+        arr.forEach((item,index)=>{//循环每一个数组
+            let x = (index%rows)*w;//定义每一个要移动的宽度:当前在数组中是第几位在模总行数然后乘以要移动的宽度
+            let y = parseInt(index/rows)*h;//定义每一个要移动的高度
+            position.push({index, x, y});//给每个数组添加要移动的宽度和高度
+            inner += `<li style="left: ${x}px;top:${y}px">
+            <img src="${item.img}"/>
+            <p>${item.txt}</p>
+        </li>`;//给li标签添加样式
+        });
+        list.innerHTML = inner;
+        let lis = list.querySelectorAll("li");
+        btns[0].onclick = function(){//当点击第一个按钮时
+            //把定义数组的数据重新排序:按从小到大的顺序排列
+            position.sort((n1,n2)=>n1.index - n2.index);
+            lis.forEach((item,index)=>{
+                mTween({
+                    el: item,
+                    attr: {
+                        left: position[index].x,
+                        top: position[index].y
+                    },
+                    type: "backOut",
+                    time: 800
+                });
+            });
+        };
+        btns[1].onclick = function(){
+            //让定义的数组重新排序然后再打乱数组
+            position.sort(()=>Math.random()-.5);
+            lis.forEach((item,index)=>{
+                mTween({
+                    el: item,
+                    attr: {
+                        left: position[index].x,
+                        top: position[index].y
+                    },
+                    type: "backOut",
+                    time: 800
+                });
+            });
+        };
+    }
+</script>
+</body>
+</html>
